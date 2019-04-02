@@ -32,29 +32,21 @@ Here is the current CodRep ranking based on Dataset5 (lower score is better).
 
 ## CodRep Rules
 
-The official ranking is computed based on a hidden dataset, which is not public or part of already published datasets. In order to maintain integrity, the hash or the encrypted version of the hidden dataset is uploaded beforehand. 
+The official ranking is computed based on a hidden dataset, which is not public or part of already published datasets. In order to maintain integrity, the hash or the encrypted version of the hidden dataset is uploaded beforehand.
 
 ## Data Structure and Format
 
 ### Format
-The provided data are in `Datasets/.../Tasks/*.txt`. The txt files are meant to be parsed by competing programs. Their format is as follows, each file contains:
-```
-{number}
-\newline
-{The full program file}
-```
+The provided data are in `Datasets/.../*.txt`. The txt files are meant to be parsed by competing programs. Each txt file corresponds to one prediction task, and the correct answer to each prediction task is at line `n+1` in `Datasets/.../output.txt`, where `n.txt` is the name of prediction task.
 
-For instance, let's consider this example input file, called `foo.txt`.
+For instance, let's consider this example input file, called `0.txt`.
 ```java
-32
-
 public class test{
   int a = 1 ;
   int b = 0.1;
 }
 ```
-In this example, the formatting error happens at the 32nd character in the input file. 
-For such an input, the competing programs output for instance `30`, which would be off the correct answer by 2.
+The correct answer is at line 1 in `output.txt`, which is 32 (unnecessary space).
 
 ## Data provenance
 
@@ -102,7 +94,7 @@ your-program Files | python evaluate.py
 The output of `evaluate.py` will be:
 ```
 Total files: 15463
-Average error: 0.988357635773 (the lower, the better)
+MAP: 0.988357635773 (the lower, the better)
 ```
 
 For evaluating specific datasets, use [-d] or [-datasets=] options and specify paths to datasets. The default behaviour is evaluating on all datasets. The path must be absolute path and multiple paths should be separated by `:`, for example:
@@ -112,23 +104,13 @@ your-program Files | python evaluate.py -d /Users/foo/bar/CodRep-competition/Dat
 
 Explanation of the output of `evaluate.py`:
 * `Total files`: Number of prediction tasks in datasets
-* `Average error`: A measurement of the errors of your prediction, as defined in **Loss function** below. This is the only measure used to win the competition
+* `MAP`: A measurement of the errors of your prediction, as defined in **Loss function** below. This is the only measure used to win the competition
 
 ## Loss function
 
-The average error is a loss function, output by `evaluate.py`, it measures how well your program performs on predicting the lines to be replaced. The lower the average line  is, the better are your predictions.
+The loss function, used to output a loss that represents the performance of your predictor, is Mean Average Precision (MAP). The lower the loss is, the better are your predictions.
 
-The loss function for one prediction task is `tanh(abs({correct char}-{predicted char}) / 5)`. which means that the maximum loss happens if the prediction is beyond a 20 character range from the actual error. 
-
-The average line error is the loss function over all tasks, as calculated as the average of all individual loss.
-
-This loss function is designed with the following properties in mind:
-* There is 0 loss when the prediction is perfect
-* There is a bounded and constant loss even when the prediction is far away
-* Before the bound, the loss is logarithmic
-* A perfect prediction is better, but only a small penalty is given to  almost-perfect ones. (in our context, some code line replacement are indeed insensitive to the exact insertion locations)
-* The loss is symmetric, continuous and differentiable (except at 0)
-* Easy to understand and to compute
+Average precision for one prediction task is defined as `1 / rank(p)`, where `p` is position of formatting error and `rank(p)` is the rank of `p` returned by your predictor. MAP is the mean of average precision across all prediction tasks.
 
 ## Base line systems
 
@@ -147,8 +129,7 @@ Dates
 
 
 * Official competition start: April 14th 2019.
-* Submission deadline for intermediate ranking: July 4th 2019. 
-* Announcement of the intermediate ranking: July 14th 2019. 
+* Submission deadline for intermediate ranking: July 4th 2019.
+* Announcement of the intermediate ranking: July 14th 2019.
 * Final submission deadline: Oct. 4th 2019.
 * Announcement of the final ranking & end of the competition Oct 14th 2019.
-
