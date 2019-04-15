@@ -8,7 +8,7 @@ The competition is designed with the following principles:
 
 To take part in the competition, you have to write a program which ranks the character offsets in a source code file according to their likeliness of containing a formatting error.
 
-For instance, in the following snippet, the system should predict that there should be no space before the semin-column by ranking the offset of the space as high as possible (ideally in first position):
+For instance, in the following snippet, the system should predict that there should be no space before the semi-column by ranking the offset of the space as high as possible (ideally in first position):
 
 ```java
 public class test{
@@ -16,11 +16,11 @@ public class test{
 }
 ```
 
-More specifically, the program  takes as input a source code file, and outputs the predicted ranking of character offsets according to its estimation of their likeliness of containing a formatting error. The formatting error has been detected by the Checkstyle tool.
+More specifically, the program takes as input a source code file and outputs the predicted ranking of character offsets according to its estimation of their likeliness of containing a formatting error. The formatting error has been detected by the Checkstyle tool.
 
 The competition is organized by KTH Royal Institute of Technology, Stockholm, Sweden. The organization team is Benjamin Loriot, [Zimin Chen](https://www.kth.se/profile/zimin) and [Martin Monperrus](http://www.monperrus.net/martin/).
 
-To be get news about CodRep and be informed about the next edition, register to the CodRep mailing list:
+To get news about CodRep and be informed about the next edition, register to the CodRep mailing list:
 [codrep+subscribe@googlegroups.com](mailto:codrep+subscribe@googlegroups.com)
 
 ## CodRep Leaderboard
@@ -61,13 +61,13 @@ Main Statistics about the data:
 
 ## Command-line interface
 
-To play in the competition, your program takes as input input a folder name, that folder containing input data files (per the format explained above).
+To play in the competition, your program takes as input a folder name, that folder containing input data files (per the format explained above).
 
 ```shell
 $ your-predictor Files
 ```
 
-Your programs outputs on the console, for each task, the predicted offset ranking. By convention, character offsets start from 1, characters are utf-8 ones (i.e. they can be composed of one to four bytes). If there is no prediction made for certain task (by not outputting *\<path\> \<offset 1\> … \<offset n\>*), you will receive minimum score (which is 0) for the task, more information about this in **Evaluation metric** below.
+Your programs outputs on the console, for each task, the predicted offset ranking. By convention, character offsets start from 1, characters are utf-8 ones (i.e. they can be composed of one to four bytes). If there is no prediction made for a certain task (by not outputting *\<path\> \<offset 1\> … \<offset n\>*), you will receive minimum score (which is 0) for the task, more information about this in **Evaluation metric** below.
 
 ```
 <Path1> <offset 1> <offset 2> … <offset n1>
