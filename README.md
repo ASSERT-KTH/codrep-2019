@@ -8,7 +8,7 @@ The competition is designed with the following principles:
 
 To take part in the competition, you have to write a program which ranks the character offsets in a source code file according to their likeliness of containing a formatting error.
 
-For instance, in the following snippet, the system should predict that there should be no space before the semicolumn by ranking the offset of the space as high as possible (ideally in first position):
+For instance, in the following snippet, the system should predict that there should be no space before the semicolon by ranking the offset of the space as high as possible (ideally in first position):
 
 ```java
 public class test{
