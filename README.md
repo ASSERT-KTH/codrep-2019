@@ -95,8 +95,8 @@ your-program Files | python evaluate.py
 
 The output of `evaluate.py` will be:
 ```
-Total files: 15463
-MAP: 0.988357635773 (the higher, the better)
+Total files: 8000
+MAP: 0.008781602439801275 (the higher, the better)
 ```
 
 To evaluate specific datasets, use [-d] or [-datasets=] options and specify paths to datasets. The default behaviour is evaluating on all datasets. The path must be absolute path and multiple paths should be separated by `:`, for example:
