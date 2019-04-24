@@ -46,7 +46,7 @@ public class test{
   int b = 0.1;
 }
 ```
-The location of the style error is at line 1 in `output.txt`. Here, it would be 32 (unnecessary space).
+The location of the style error is at line 1 in `out.txt`. Here, it would be 30 (unnecessary space).
 
 ## Data provenance
 
