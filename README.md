@@ -31,16 +31,30 @@ To get news about CodRep and be informed about the next edition, register to the
 * Final submission deadline: Oct. 10th 2019.
 * Announcement of the final ranking & end of the competition Oct 25th 2019.
 
-## CodRep Leaderboard
+## Competition Rules
 
-Here is the current CodRep ranking based on Dataset5 (lower score is better).
+### The winners and rankings
+
+There are two rankings, an intermediate one, aiming at fostering competition, and a final one, to designate the winners.
+The intermediate and final ranking will be computed based on hidden datasets, which are not public or part of already published datasets. The hidden datasets used in intermediate and final ranking will be different, and they will be published after the respective deadlines. In order to maintain integrity, the hash or the encrypted version of the hidden datasets will be uploaded beforehand. 
+
+### Prizes
+What the participants get?
+
+1. All participants get their name in the CodRep hall of fame
+1. The top-10 participants will get KTH goodies by post
+
+What the winner gets?
+
+1. The ultimate CodRep fame
+1. A travel invitation to KTH in Stockholm, all expenses paid, to meet, discuss and have fun.
+1. An official KTH certificate
+
+### Leaderboard
 
 | # | Team (Institution/Company) | Score | Tool/Source |
 | --- | --- | --- | --- |
 
-## CodRep Rules
-
-The official ranking is computed based on a hidden dataset, which is not public or part of already published datasets. In order to maintain integrity, the hash or the encrypted version of the hidden dataset is uploaded beforehand.
 
 ## Data Structure and Format
 
