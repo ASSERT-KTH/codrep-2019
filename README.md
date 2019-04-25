@@ -18,10 +18,18 @@ public class test{
 
 More specifically, the program takes as input a source code file and outputs the predicted ranking of character offsets according to its estimation of their likeliness of containing a formatting error. The formatting error has been detected by the Checkstyle tool.
 
-The competition is organized by KTH Royal Institute of Technology, Stockholm, Sweden. The organization team is Benjamin Loriot, [Zimin Chen](https://www.kth.se/profile/zimin) and [Martin Monperrus](http://www.monperrus.net/martin/).
+The competition is organized by KTH Royal Institute of Technology, Stockholm, Sweden. The organization team is [Zimin Chen](https://www.kth.se/profile/zimin) and [Martin Monperrus](http://www.monperrus.net/martin/). [Benjamin Loriot](https://fr.linkedin.com/in/benjamin-loriot-54248a14a/en) has made essential contributions to the data generation.
 
 To get news about CodRep and be informed about the next edition, register to the CodRep mailing list:
 [codrep+subscribe@googlegroups.com](mailto:codrep+subscribe@googlegroups.com)
+
+# Important Dates
+
+* Official competition start: April 25th 2019.
+* Submission deadline for intermediate ranking: July 15th 2019.
+* Announcement of the intermediate ranking: July 25th 2019.
+* Final submission deadline: Oct. 10th 2019.
+* Announcement of the final ranking & end of the competition Oct 25th 2019.
 
 ## CodRep Leaderboard
 
@@ -121,10 +129,3 @@ We provide 3 dumb systems to illustrate how to parse the data and having a basel
 * `guessReversed.py`: Always predict the offsets of the file in decreasing order
 * `guessRandom.py`: Predicts a random ranking of the offsets in the file
 
-# Dates
-
-* Official competition start: April 14th 2019.
-* Submission deadline for intermediate ranking: July 4th 2019.
-* Announcement of the intermediate ranking: July 14th 2019.
-* Final submission deadline: Oct. 4th 2019.
-* Announcement of the final ranking & end of the competition Oct 14th 2019.
