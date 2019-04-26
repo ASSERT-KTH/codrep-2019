@@ -59,7 +59,7 @@ What the winner gets?
 ## Data Structure and Format
 
 ### Format
-The provided data are in `Datasets/.../*.txt`. The txt files are meant to be parsed by competing programs. Each txt file corresponds to one prediction task, and the offset of the style error for each prediction task is at line `n+1` in `Datasets/.../output.txt`, where `n.txt` is the name of prediction task.
+The provided data are in `Datasets/.../*.txt`. The txt files are meant to be parsed by competing programs. Each txt file corresponds to one prediction task written in Java, and the offset of the style error for each prediction task is at line `n+1` in `Datasets/.../output.txt`, where `n.txt` is the name of prediction task.
 
 For instance, let's consider this example input file, called `0.txt`.
 ```java
