@@ -118,7 +118,7 @@ your-program Files | python evaluate.py
 The output of `evaluate.py` will be:
 ```
 Total files: 8000
-MAP: 0.008781602439801275 (the higher, the better)
+MRR: 0.008781602439801275 (the higher, the better)
 ```
 
 To evaluate specific datasets, use [-d] or [-datasets=] options and specify paths to datasets. The default behaviour is evaluating on all datasets. The path must be absolute path and multiple paths should be separated by `:`, for example:
@@ -132,9 +132,9 @@ Explanation of the output of `evaluate.py`:
 
 ## Evaluation metric
 
-The evaluation metric, used to output a score that represents the performance of your predictor, is Mean Average Precision (MAP). The higher the score is, the better are your predictions.
+The evaluation metric, used to output a score that represents the performance of your predictor, is Mean Reciprocal Rank (MRR). The higher the score is, the better are your predictions.
 
-Average precision for one prediction task is defined as `1 / rank(p)`, where `p` is position of formatting error and `rank(p)` is the rank of `p` returned by your predictor. MAP is the mean of average precision across all prediction tasks.
+Reciprocal rank for one prediction task is defined as `1 / rank(p)`, where `p` is position of formatting error and `rank(p)` is the rank of `p` returned by your predictor. MRR is the mean of reciprocal rank across all prediction tasks.
 
 ## Baseline systems
 
