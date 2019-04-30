@@ -128,7 +128,7 @@ your-program Files | python evaluate.py -d /Users/foo/bar/CodRep-competition/Dat
 
 Explanation of the output of `evaluate.py`:
 * `Total files`: Number of prediction tasks in datasets
-* `MAP`: A measurement of the errors of your prediction, as defined in **Loss function** below. This is the only measure used to win the competition
+* `MRR`: A measurement of the errors of your prediction, as defined in **Loss function** below. This is the only measure used to win the competition
 
 ## Evaluation metric
 
