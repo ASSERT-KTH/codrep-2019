@@ -54,7 +54,8 @@ What the winner gets?
 
 | # | Team (Institution/Company) | Score | Tool/Source |
 | --- | --- | --- | --- |
-
+| - | [JetBrains Research (E. Bogomolov et al.)](https://github.com/KTH/codrep-2019/issues/3) | - | - |
+| - | [source{d} (H. Mougard et al.)](https://github.com/KTH/codrep-2019/issues/4) | - | - |
 
 ## Data Structure and Format
 
