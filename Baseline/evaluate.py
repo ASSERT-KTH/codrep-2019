@@ -1,6 +1,7 @@
 import sys
 import getopt
 import errno
+import os
 from pathlib import Path
 
 # Total number of files in chosen datasets
