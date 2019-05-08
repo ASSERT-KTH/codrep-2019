@@ -48,7 +48,7 @@ What the winner gets?
 
 1. The ultimate CodRep fame
 1. A travel invitation to KTH in Stockholm, all expenses paid, to meet, discuss and have fun.
-1. An official KTH certificate
+1. An [official KTH certificate](https://github.com/KTH/CodRep-competition/blob/master/docs/coderep2018-winner-jordan-with-certificate-small.jpg)
 
 ### Leaderboard
 
