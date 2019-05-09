@@ -8,7 +8,7 @@ The competition is designed with the following principles:
 
 To take part in the competition, you have to write a program which ranks the character offsets in a source code file according to their likeliness of containing a formatting error.
 
-For instance, in the following snippet, the system should predict that there should be no space before the semicolumn by ranking the offset of the space as high as possible (ideally in first position):
+For instance, in the following snippet, the system should predict that there should be no space before the semicolon by ranking the offset of the space as high as possible (ideally in first position):
 
 ```java
 public class test{
@@ -18,26 +18,49 @@ public class test{
 
 More specifically, the program takes as input a source code file and outputs the predicted ranking of character offsets according to its estimation of their likeliness of containing a formatting error. The formatting error has been detected by the Checkstyle tool.
 
-The competition is organized by KTH Royal Institute of Technology, Stockholm, Sweden. The organization team is Benjamin Loriot, [Zimin Chen](https://www.kth.se/profile/zimin) and [Martin Monperrus](http://www.monperrus.net/martin/).
+The competition is organized by KTH Royal Institute of Technology, Stockholm, Sweden. The organization team is [Zimin Chen](https://www.kth.se/profile/zimin) and [Martin Monperrus](http://www.monperrus.net/martin/). [Benjamin Loriot](https://fr.linkedin.com/in/benjamin-loriot-54248a14a/en) has made essential contributions to the data generation.
 
 To get news about CodRep and be informed about the next edition, register to the CodRep mailing list:
 [codrep+subscribe@googlegroups.com](mailto:codrep+subscribe@googlegroups.com)
 
-## CodRep Leaderboard
+# Important Dates
 
-Here is the current CodRep ranking based on Dataset5 (lower score is better).
+* Official competition start: April 25th 2019.
+* Submission deadline for intermediate ranking: July 15th 2019.
+* Announcement of the intermediate ranking: July 25th 2019.
+* Final submission deadline: Oct. 10th 2019.
+* Announcement of the final ranking & end of the competition Oct 25th 2019.
+
+## Competition Rules
+
+### The winners and rankings
+
+There are two rankings, an intermediate one, aiming at fostering competition, and a final one, to designate the winners.
+The intermediate and final ranking will be computed based on hidden datasets, which are not public or part of already published datasets. The hidden datasets used in intermediate and final ranking will be different, and they will be published after the respective deadlines. In order to maintain integrity, the hash or the encrypted version of the hidden datasets will be uploaded beforehand. 
+
+### Prizes
+What the participants get?
+
+1. All participants get their name in the CodRep hall of fame
+1. The top-10 participants will get KTH goodies by post
+
+What the winner gets?
+
+1. The ultimate CodRep fame
+1. A travel invitation to KTH in Stockholm, all expenses paid, to meet, discuss and have fun.
+1. An [official KTH certificate](https://github.com/KTH/CodRep-competition/blob/master/docs/coderep2018-winner-jordan-with-certificate-small.jpg)
+
+### Leaderboard
 
 | # | Team (Institution/Company) | Score | Tool/Source |
 | --- | --- | --- | --- |
-
-## CodRep Rules
-
-The official ranking is computed based on a hidden dataset, which is not public or part of already published datasets. In order to maintain integrity, the hash or the encrypted version of the hidden dataset is uploaded beforehand.
+| - | [JetBrains Research (E. Bogomolov et al.)](https://github.com/KTH/codrep-2019/issues/3) | - | - |
+| - | [source{d} (H. Mougard et al.)](https://github.com/KTH/codrep-2019/issues/4) | - | - |
 
 ## Data Structure and Format
 
 ### Format
-The provided data are in `Datasets/.../*.txt`. The txt files are meant to be parsed by competing programs. Each txt file corresponds to one prediction task, and the offset of the style error for each prediction task is at line `n+1` in `Datasets/.../output.txt`, where `n.txt` is the name of prediction task.
+The provided data are in `Datasets/.../*.txt`. The txt files are meant to be parsed by competing programs. Each txt file corresponds to one prediction task written in Java, and the offset of the style error for each prediction task is at line `n+1` in `Datasets/.../output.txt`, where `n.txt` is the name of prediction task.
 
 For instance, let's consider this example input file, called `0.txt`.
 ```java
@@ -46,7 +69,7 @@ public class test{
   int b = 0.1;
 }
 ```
-The location of the style error is at line 1 in `output.txt`. Here, it would be 32 (unnecessary space).
+The location of the style error is at line 1 in `out.txt`. Here, it would be 30 (unnecessary space).
 
 ## Data provenance
 
@@ -95,8 +118,8 @@ your-program Files | python evaluate.py
 
 The output of `evaluate.py` will be:
 ```
-Total files: 15463
-MAP: 0.988357635773 (the higher, the better)
+Total files: 8000
+MRR: 0.008781602439801275 (the higher, the better)
 ```
 
 To evaluate specific datasets, use [-d] or [-datasets=] options and specify paths to datasets. The default behaviour is evaluating on all datasets. The path must be absolute path and multiple paths should be separated by `:`, for example:
@@ -106,13 +129,13 @@ your-program Files | python evaluate.py -d /Users/foo/bar/CodRep-competition/Dat
 
 Explanation of the output of `evaluate.py`:
 * `Total files`: Number of prediction tasks in datasets
-* `MAP`: A measurement of the errors of your prediction, as defined in **Loss function** below. This is the only measure used to win the competition
+* `MRR`: A measurement of the errors of your prediction, as defined in **Evaluation metric** below. This is the only measure used to win the competition
 
 ## Evaluation metric
 
-The evaluation metric, used to output a score that represents the performance of your predictor, is Mean Average Precision (MAP). The higher the score is, the better are your predictions.
+The evaluation metric, used to output a score that represents the performance of your predictor, is Mean Reciprocal Rank (MRR). The higher the score is, the better are your predictions.
 
-Average precision for one prediction task is defined as `1 / rank(p)`, where `p` is position of formatting error and `rank(p)` is the rank of `p` returned by your predictor. MAP is the mean of average precision across all prediction tasks.
+Reciprocal rank for one prediction task is defined as `1 / rank(p)`, where `p` is position of formatting error and `rank(p)` is the rank of `p` returned by your predictor. MRR is the mean of reciprocal rank across all prediction tasks.
 
 ## Baseline systems
 
@@ -121,10 +144,3 @@ We provide 3 dumb systems to illustrate how to parse the data and having a basel
 * `guessReversed.py`: Always predict the offsets of the file in decreasing order
 * `guessRandom.py`: Predicts a random ranking of the offsets in the file
 
-# Dates
-
-* Official competition start: April 14th 2019.
-* Submission deadline for intermediate ranking: July 4th 2019.
-* Announcement of the intermediate ranking: July 14th 2019.
-* Final submission deadline: Oct. 4th 2019.
-* Announcement of the final ranking & end of the competition Oct 14th 2019.
