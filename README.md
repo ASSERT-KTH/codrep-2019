@@ -57,6 +57,7 @@ What the winner gets?
 | - | [JetBrains Research (E. Bogomolov et al.)](https://github.com/KTH/codrep-2019/issues/3) | - | - |
 | - | [source{d} (H. Mougard et al.)](https://github.com/KTH/codrep-2019/issues/4) | - | - |
 | - | [Aristotle University of Thessaloniki (T. Karanikiotis et al.)](https://github.com/KTH/codrep-2019/issues/7) | - | - |
+| - | [Handong Global University (Sangchul, Juyoung, Shin and Heeyoul)](https://github.com/KTH/codrep-2019/issues/9) | - | - |
 
 
 
