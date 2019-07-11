@@ -128,7 +128,7 @@ MRR: 0.008781602439801275 (the higher, the better)
 
 To evaluate specific datasets, use [-d] or [-datasets=] options and specify paths to datasets. The default behaviour is evaluating on all datasets. The path must be absolute path and multiple paths should be separated by `:`, for example:
 ```shell
-your-program Files | python evaluate.py -d /Users/foo/bar/CodRep-competition/Datasets/Dataset1:/Users/foo/bar/CodRep-competition/Datasets/Dataset2
+your-program /Users/foo/bar/CodRep-competition/Datasets/Dataset1 /Users/foo/bar/CodRep-competition/Datasets/Dataset2 | python evaluate.py -d /Users/foo/bar/CodRep-competition/Datasets/Dataset1:/Users/foo/bar/CodRep-competition/Datasets/Dataset2
 ```
 
 Explanation of the output of `evaluate.py`:
