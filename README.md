@@ -50,16 +50,17 @@ What the winner gets?
 1. A travel invitation to KTH in Stockholm, all expenses paid, to meet, discuss and have fun.
 1. An [official KTH certificate](https://github.com/KTH/CodRep-competition/blob/master/docs/coderep2018-winner-jordan-with-certificate-small.jpg)
 
-### Leaderboard
+### Current Leaderboard (intermediate ranking from July 2019)
 
 | # | Team (Institution/Company) | Score | Tool/Source |
 | --- | --- | --- | --- |
-| - | [JetBrains Research (E. Bogomolov et al.)](https://github.com/KTH/codrep-2019/issues/3) | - | - |
-| - | [source{d} (H. Mougard et al.)](https://github.com/KTH/codrep-2019/issues/4) | - | - |
-| - | [Aristotle University of Thessaloniki (T. Karanikiotis et al.)](https://github.com/KTH/codrep-2019/issues/7) | - | - |
-| - | [Handong Global University (Sangchul, Juyoung, Shin and Heeyoul)](https://github.com/KTH/codrep-2019/issues/9) | - | - |
+| - | [Handong Global University (Sangchul, Juyoung, Shin and Heeyoul)](https://github.com/KTH/codrep-2019/issues/9) | 0.98 | - |
+| - | [Aristotle University of Thessaloniki (T. Karanikiotis et al.)](https://github.com/KTH/codrep-2019/issues/7) | 0.69 | - |
+| - | [source{d} (H. Mougard et al.)](https://github.com/KTH/codrep-2019/issues/4) | 0.46 | - |
 
+### Final Leaderboard
 
+TBA
 
 ## Data Structure and Format
 
