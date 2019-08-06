@@ -54,9 +54,9 @@ What the winner gets?
 
 | # | Team (Institution/Company) | Score | Tool/Source |
 | --- | --- | --- | --- |
-| - | [Handong Global University (Sangchul, Juyoung, Shin and Heeyoul)](https://github.com/KTH/codrep-2019/issues/9) | 0.98 | - |
-| - | [Aristotle University of Thessaloniki (T. Karanikiotis et al.)](https://github.com/KTH/codrep-2019/issues/7) | 0.69 | - |
-| - | [source{d} (H. Mougard et al.)](https://github.com/KTH/codrep-2019/issues/4) | 0.46 | - |
+| 1 | [Handong Global University (Sangchul, Juyoung, Shin and Heeyoul)](https://github.com/KTH/codrep-2019/issues/9) | 0.98 | - |
+| 2 | [Aristotle University of Thessaloniki (T. Karanikiotis et al.)](https://github.com/KTH/codrep-2019/issues/7) | 0.69 | - |
+| 3 | [source{d} (H. Mougard et al.)](https://github.com/KTH/codrep-2019/issues/4) | 0.46 | - |
 
 ### Final Leaderboard
 
