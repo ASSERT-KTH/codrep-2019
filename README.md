@@ -60,7 +60,11 @@ What the winner gets?
 
 ### Final Leaderboard
 
-TBA
+| # | Team (Institution/Company) | Score | Tool/Source |
+| --- | --- | --- | --- |
+| 1 | [Handong Global University (Sangchul, Juyoung, Shin and Heeyoul)](https://github.com/KTH/codrep-2019/issues/9) | 0.99 | - |
+| 2 | [Team AuthEceSoftEng (Thomas, Kyriakos and Andreas)](https://github.com/KTH/codrep-2019/issues/7) | 0.98 | - |
+| 3 | [source{d} (H. Mougard et al.)](https://github.com/KTH/codrep-2019/issues/4) | 0.54 | - |
 
 ## Data Structure and Format
 
